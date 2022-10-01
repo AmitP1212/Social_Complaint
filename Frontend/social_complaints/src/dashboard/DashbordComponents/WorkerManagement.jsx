@@ -299,6 +299,7 @@ export default function WorkerManagement() {
                                                             name='firstname'
                                                             placeholder={firstname}
                                                             onBlur={(e) => { if (e.target.value.length != 0) setFirstname(e.target.value) }}
+                                                            required
                                                         />
                                                     </MDBCol>
 
@@ -330,6 +331,7 @@ export default function WorkerManagement() {
                                                             type='text'
                                                             placeholder={lastname}
                                                             onBlur={(e) => { if (e.target.value.length != 0) setLastname(e.target.value) }}
+                                                            required
                                                         />
                                                     </MDBCol>
 
@@ -338,6 +340,7 @@ export default function WorkerManagement() {
                                                             wrapperClass='mb-4'
                                                             label='Aadhaar Number'
                                                             name='aadhaar'
+                                                            pattern='^[2-9]{1}[0-9]{11}$'
                                                             size='lg'
                                                             // id='form4'
                                                             type='number'
@@ -369,6 +372,7 @@ export default function WorkerManagement() {
                                                             wrapperClass='mb-4'
                                                             label='Username*'
                                                             name='username'
+                                                            pattern='^(?=[a-zA-Z0-9._]{8,20}$)(?!.*[_.]{2})[^_.].*[^_.]$'
                                                             size='lg'
                                                             // id='form1'
                                                             type='text'
@@ -382,6 +386,7 @@ export default function WorkerManagement() {
                                                             wrapperClass='mb-4'
                                                             label='Password*'
                                                             name='password'
+                                                            pattern='^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&_])[A-Za-z\d@$!%*?&_]{8,10}$'
                                                             size='lg'
                                                             // id='form2'
                                                             type='password'
@@ -419,6 +424,7 @@ export default function WorkerManagement() {
                                                             wrapperClass='mb-4'
                                                             labelClass='text-white'
                                                             name='pin'
+                                                            pattern='^[1-9]{1}[0-9]{2}\\s{0, 1}[0-9]{3}$'
                                                             label='Pin Code'
                                                             size='lg'
                                                             // id='form6'
@@ -453,6 +459,7 @@ export default function WorkerManagement() {
                                                             wrapperClass='mb-4'
                                                             labelClass='text-white'
                                                             name='phone'
+                                                            pattern='^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$'
                                                             label='Phone Number'
                                                             size='lg'
                                                             // id='form10'
@@ -469,6 +476,7 @@ export default function WorkerManagement() {
                                                     wrapperClass='mb-4'
                                                     labelClass='text-white'
                                                     name='email'
+                                                    pattern='^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$'
                                                     label='Your Email'
                                                     size='lg'
                                                     // id='form8'

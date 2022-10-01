@@ -179,6 +179,7 @@ export default function AddOfficialWorker() {
                                                         type='text'
                                                         name='user_first_name'
                                                         onChange={setValues}
+                                                        required
                                                     />
                                                 </MDBCol>
 
@@ -208,6 +209,7 @@ export default function AddOfficialWorker() {
                                                         id='form3'
                                                         type='text'
                                                         onChange={setValues}
+                                                        required
                                                     />
                                                 </MDBCol>
 
@@ -216,6 +218,7 @@ export default function AddOfficialWorker() {
                                                         wrapperClass='mb-4'
                                                         label='Aadhaar Number'
                                                         name='user_aadhar_number'
+                                                        pattern='^[2-9]{1}[0-9]{11}$'
                                                         size='lg'
                                                         id='form4'
                                                         type='number'
@@ -244,8 +247,8 @@ export default function AddOfficialWorker() {
                                                         wrapperClass='mb-4'
                                                         label='Username*'
                                                         name='userUsername'
+                                                        pattern='^(?=[a-zA-Z0-9._]{8,20}$)(?!.*[_.]{2})[^_.].*[^_.]$'
                                                         size='lg'
-                                                        // id='form1'
                                                         type='text'
                                                         onChange={setValues}
                                                     />
@@ -256,6 +259,7 @@ export default function AddOfficialWorker() {
                                                         wrapperClass='mb-4'
                                                         label='Password*'
                                                         name='user_password'
+                                                        pattern='^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&_])[A-Za-z\d@$!%*?&_]{8,10}$'
                                                         size='lg'
                                                         // id='form2'
                                                         type='password'
@@ -278,7 +282,7 @@ export default function AddOfficialWorker() {
                                                 name='user_address_state'
                                                 label='State'
                                                 size='lg'
-                                                // id='form5'
+                                                
                                                 type='text'
                                                 disabled="true"
                                                 placeholder="Maharashtra"
@@ -293,9 +297,10 @@ export default function AddOfficialWorker() {
                                                         wrapperClass='mb-4'
                                                         labelClass='text-white'
                                                         name='user_pincode'
+                                                        pattern='^[1-9]{1}[0-9]{2}\\s{0, 1}[0-9]{3}$'
                                                         label='Pin Code'
                                                         size='md'
-                                                        // id='form6'
+                                                        
                                                         type='number'
                                                         onChange={setValues}
                                                     />
@@ -370,6 +375,7 @@ export default function AddOfficialWorker() {
                                                         labelClass='text-white'
                                                         className='form-control '
                                                         name='user_contact_number'
+                                                        pattern='^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$'
                                                         label='Phone Number'
                                                         size='small'
                                                         // id='form10'
@@ -386,6 +392,7 @@ export default function AddOfficialWorker() {
                                                 wrapperClass='mb-4'
                                                 labelClass='text-white'
                                                 name='user_email'
+                                                pattern='^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$'
                                                 label='Your Email'
                                                 size='lg'
                                                 // id='form8'

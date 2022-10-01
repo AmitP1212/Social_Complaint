@@ -96,8 +96,8 @@ function WorkerLogin() {
 
                 <h4 className="fw-normal my-4 pb-3" style={{ letterSpacing: '1px' }}>Sign into your account</h4>
 
-                <MDBInput onChange={ setValues } wrapperClass='mb-4' label='Username' name='username' id='username' type='text' size="lg" />
-                <MDBInput onChange={ setValues } wrapperClass='mb-4' label='Password' name='password' id='password' type='password' size="lg" />
+                <MDBInput onChange={ setValues } wrapperClass='mb-4' pattern='^(?=[a-zA-Z0-9._]{8,20}$)(?!.*[_.]{2})[^_.].*[^_.]$' label='Username' name='username' id='username' type='text' size="lg" />
+                <MDBInput onChange={ setValues } wrapperClass='mb-4' pattern='^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&_])[A-Za-z\d@$!%*?&_]{8,10}$' label='Password' name='password' id='password' type='password' size="lg" />
 
                 <MDBBtn onClick={validate} className="mb-4 px-5" color='primary' size='lg'>Login</MDBBtn>
                 <p><a className="small text-muted" href="/forgotpassuser">Forgot password?</a></p>
